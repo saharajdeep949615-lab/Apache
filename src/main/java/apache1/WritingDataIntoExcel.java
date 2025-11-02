@@ -1,5 +1,6 @@
 package apache1;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -18,23 +19,26 @@ public class WritingDataIntoExcel {
 
         XSSFSheet sheet=workbook.createSheet();
 
-//        XSSFRow row1=sheet.createRow(0);
-//        row1.createCell(0).setCellValue("Java");
-//        row1.createCell(1).setCellValue(1);
-//        row1.createCell(2).setCellValue("Automation");
-//
-//        XSSFRow row2=sheet.createRow(1);
-//        row2.createCell(0).setCellValue("Python");
-//        row2.createCell(1).setCellValue(2);
-//        row2.createCell(2).setCellValue("Automation");
-//
-//        XSSFRow row3=sheet.createRow(2);
-//        row3.createCell(0).setCellValue("C#");
-//        row3.createCell(1).setCellValue(3);
-//        row3.createCell(2).setCellValue("Automation");
+        XSSFRow row1=sheet.createRow(0);
+        row1.createCell(0).setCellValue("Java");
+        row1.createCell(1).setCellValue(1);
+        row1.createCell(2).setCellValue("Automation");
+
+        XSSFRow row2=sheet.createRow(1);
+        row2.createCell(0).setCellValue("Python");
+        row2.createCell(1).setCellValue(2);
+        row2.createCell(2).setCellValue("Automation");
+
+        XSSFRow row3=sheet.createRow(2);
+        row3.createCell(0).setCellValue("C#");
+        row3.createCell(1).setCellValue(3);
+        row3.createCell(2).setCellValue("Automation");
 
 
-        
+//        XSSFRow  rows=sheet.createRow(3);
+//        XSSFCell cell=rows.createCell(4);
+//
+//        cell.setCellValue("WELECOME");
 
         workbook.write(file);
         workbook.close();
