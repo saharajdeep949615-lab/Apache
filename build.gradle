@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.serenityselenium.practice'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.poi:poi:5.2.5'
+    implementation 'org.apache.poi:poi-ooxml:5.2.5'
+}
+
+dependencies {
+    // Serenity main libraries
+    testImplementation 'net.serenity-bdd:serenity-core:3.9.8'
+    testImplementation 'net.serenity-bdd:serenity-junit:3.9.8'
+    testImplementation 'net.serenity-bdd:serenity-cucumber:3.9.8'
+
+    // Selenium
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.25.0'
+
+    // Logging
+    testImplementation 'org.slf4j:slf4j-simple:2.0.16'
+
+    // JUnit
+    testImplementation 'junit:junit:4.13.2'
+}
+
+application {
+    mainClass = 'java.apache1.ReadingDataFromExcel'
+}
